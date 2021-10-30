@@ -3,7 +3,7 @@
  * Lab 3: Prime Numbers
  *
  * @author Zayaan Hussain
- * @version .006
+ * @version .001
  */
 public class primeNumbers
 {    
@@ -53,8 +53,10 @@ public class primeNumbers
         int currentNumber = 2;
         int primeNumberCount = 0;
         if ( 0<=n && n<=11){
+            // this is going to pretty much see if the currentNumber variable is a prime number.
+            // If is, it will continue with the loop otherwise it will revert to the else statement
             while (primeNumberCount < n) { 
-                if (currentNumber == cal.smallestPrimeFactor(currentNumber)) { // this is going to be the thing saying that if the current number is if the current number is a prime number, 
+                if (currentNumber == cal.smallestPrimeFactor(currentNumber)) { 
                     productSoFar *= cal.smallestPrimeFactor(currentNumber);
                     primeNumberCount++;
                     currentNumber++;
