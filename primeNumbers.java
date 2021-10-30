@@ -3,23 +3,10 @@
  * Lab 3: Prime Numbers
  *
  * @author Zayaan Hussain
- * @version .001
+ * @version .006
  */
 public class primeNumbers
-{
-    public int smallestPrimeFactor (int n) {
-        //start at 2
-
-        int d = 2;
-        //then go to 3... (and so on while the loop is true)
-
-        while ( n % d != 0) {
-            d++;
-        }
-
-        return d;
-    }
-
+{    
     /**
      * Task 1:
      * 
@@ -34,10 +21,11 @@ public class primeNumbers
      */
 
     public int prime (int i) {
+        Calculator cal = new Calculator();
         int primeNumberCount = 0;
         int n = 2;
         while (primeNumberCount != i) {
-            if (n == smallestPrimeFactor(n)) {
+            if (n == cal.smallestPrimeFactor(n)) {
                 primeNumberCount++;
             }
             n++;
@@ -124,7 +112,6 @@ public class primeNumbers
                 System.out.println (eucidNumber(i));
             }
         }
-        
 
     }
 }
