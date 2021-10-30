@@ -89,9 +89,8 @@ public class primeNumbers
      * which will then give us that answer, then we just add one to that value. 
      * if the requested numbers for the value int n exceed the param values set,
      * it will call back to the primoral method. since primoral has the same values
-     * it will give the same value as before, which would be one. For this method we
-     * have the primoral value + 1. Since it would be giving us one, it would return
-     * 1 + 1, which would be equal to 2. 
+     * it will give the same value as before, which would be one. If the n value
+     * is less or more than the range of 1-11, it will return -1
      * 
      * Param numbers will be 0<= 1 <= 11
      */
@@ -100,11 +99,12 @@ public class primeNumbers
         // primeNumbers primoral = new primeNumbers();
         // v = primoral(n) + 1;
         if ( 0<=n && n<=11){ 
+
+            return primoral(n) + 1;
         }
-        return primoral(n) + 1;
-
-
+        return -1;
     }
+
     /** 
      * Task 4: 
      * 
@@ -113,6 +113,18 @@ public class primeNumbers
      * elucid number for N. We print each one, for example if I had n = 3, i would 
      * have a printed out value of 2+1, 6+1, 30+1, since we would have the first prime 
      * number, then the second one would be 2 * 3 + 1. then it would essentially keep 
-     * going like that. 
+     * going like that. If the n value, or the value of us going too high for how many times
+     * we want the loop to repeat itself, it will return a value of -1, similar to how task 3 
+     * does
      */
+
+    public void listEucidNumbers (int n) {
+        if ( 0<=n && n<=11){  
+            for (int i = 1; i <= n; i++) {
+                System.out.println (eucidNumber(i));
+            }
+        }
+        
+
+    }
 }
