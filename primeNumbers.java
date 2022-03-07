@@ -2,7 +2,7 @@
 /**
  * Lab 3: Prime Numbers
  *
- * @author Zayaan Hussain
+ * @author zayaanhu
  * @version .001
  */
 public class primeNumbers
